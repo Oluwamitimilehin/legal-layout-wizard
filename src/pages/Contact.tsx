@@ -1,0 +1,238 @@
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+    });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-primary">
+              Contact Us
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Have a legal question or need representation? We're here to help. 
+              Reach out today for a consultation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Contact Info */}
+            <div className="lg:col-span-1 space-y-6">
+              <Card className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Phone className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-primary mb-1">Phone</h3>
+                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-sm text-muted-foreground mt-1">Mon-Fri 9am-6pm</p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Mail className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-primary mb-1">Email</h3>
+                    <p className="text-muted-foreground">info@parkerbrown.com</p>
+                    <p className="text-sm text-muted-foreground mt-1">24/7 support</p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <MapPin className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-primary mb-1">Address</h3>
+                    <p className="text-muted-foreground">
+                      123 Legal Avenue, Suite 500<br />
+                      New York, NY 10001
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Clock className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-primary mb-1">Office Hours</h3>
+                    <p className="text-muted-foreground">
+                      Monday - Friday: 9:00 AM - 6:00 PM<br />
+                      Saturday: 10:00 AM - 2:00 PM<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            {/* Contact Form */}
+            <div className="lg:col-span-2">
+              <Card className="p-8">
+                <h2 className="font-serif text-3xl font-bold text-primary mb-6">
+                  Send Us a Message
+                </h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        Full Name *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        Email Address *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                        Phone Number
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="(555) 123-4567"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                        Subject *
+                      </label>
+                      <Input
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                        placeholder="How can we help?"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      Message *
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={6}
+                      placeholder="Please describe your legal matter..."
+                    />
+                  </div>
+
+                  <Button type="submit" size="lg" className="w-full">
+                    Send Message
+                  </Button>
+                </form>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-3xl font-bold text-center mb-8 text-primary">
+              Visit Our Office
+            </h2>
+            <Card className="overflow-hidden">
+              <div className="aspect-video bg-secondary flex items-center justify-center">
+                <p className="text-muted-foreground">Map Location Placeholder</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Contact;
