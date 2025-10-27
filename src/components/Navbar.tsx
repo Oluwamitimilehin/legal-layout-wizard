@@ -9,11 +9,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Pricing", path: "/pricing" },
+    { name: "Tax Support Services", path: "/pricing" },
     { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -26,10 +26,10 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex flex-col">
               <span className="font-serif text-xl md:text-2xl font-semibold text-primary">
-                Parker & Brown
+                The
               </span>
               <span className="text-xs text-muted-foreground tracking-wider">
-                LAW FIRM
+                Law Gates Solicitors
               </span>
             </div>
           </Link>

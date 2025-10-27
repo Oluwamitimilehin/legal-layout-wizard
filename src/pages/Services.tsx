@@ -9,82 +9,47 @@ import {
   Shield, 
   FileText, 
   Users, 
-  Gavel 
+  Gavel, 
+  LandPlotIcon
 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Briefcase,
-      title: "Employment Law",
-      description: "Comprehensive representation for workplace discrimination, wrongful termination, harassment, and wage disputes.",
-      details: [
-        "Wrongful termination claims",
-        "Workplace discrimination",
-        "Sexual harassment cases",
-        "Wage and hour disputes",
-        "Employment contract negotiations",
-      ],
+      icon: Gavel,
+      title: "Dispute Resolution & Recovery",
+      description: "We take a pragmatic and objective approach to resolving complex disputes. Recognising the time value of money, our goal is to settle issues efficiently, quietly, and in our clients’ best interests. We provide early neutral evaluations and cost–benefit analyses of litigation and negotiation options before deciding on the most effective path. Our advocates are skilled in both litigation and alternative dispute resolution, with proven experience assisting financial institutions in debt recovery and enforcement."
     },
     {
       icon: Scale,
-      title: "Labor Relations",
-      description: "Expert guidance in union negotiations, collective bargaining, and labor dispute resolution.",
-      details: [
-        "Union representation",
-        "Collective bargaining agreements",
-        "Labor dispute mediation",
-        "NLRB proceedings",
-        "Strike and lockout issues",
-      ],
+      title: "Tax Planning & Advisory Services",
+      description: "Our dedicated tax team helps clients navigate Nigeria’s evolving tax landscape with clarity and confidence. We deliver strategic tax planning and advisory services backed by deep experience before federal and state tax authorities. Our partners bring a blend of public and private sector expertise, complemented by strong relationships with regulators to ease compliance and mitigate tax risks. We have successfully represented clients before the Tax Appeal Tribunal and appellate courts in significant tax disputes.",
     },
     {
       icon: Shield,
-      title: "Criminal Defense",
-      description: "Aggressive defense for all criminal charges, from misdemeanors to serious felonies.",
-      details: [
-        "White collar crimes",
-        "Drug offenses",
-        "Assault and battery",
-        "Theft and fraud",
-        "DUI/DWI defense",
-      ],
+      title: "Banking & Corporate Finance",
+      description: "We provide comprehensive legal support in banking law, asset-based financing, and security perfection — including ship and aircraft mortgages. Our lawyers advise on securitisation, syndicated loans, and inter-creditor arrangements, leveraging hands-on experience from major financial transactions. We also conduct corporate searches and due diligence to support informed decision-making in complex finance deals.",
+      
     },
     {
-      icon: Gavel,
-      title: "Criminal Appeals",
-      description: "Strategic appellate representation to challenge convictions and fight for justice.",
-      details: [
-        "Post-conviction relief",
-        "Sentence reduction",
-        "Constitutional violations",
-        "Ineffective counsel claims",
-        "Evidence challenges",
-      ],
+      icon: Briefcase,
+      title: "Transaction Support",
+      description: "Drawing on our senior team’s experience in consulting and commercial law, we deliver practical support across the transaction lifecycle. Our expertise covers debt management and recovery, insolvency, corporate restructuring, and financial advisory. We help clients manage risks, optimise outcomes, and achieve smooth deal execution.",
     },
     {
       icon: FileText,
-      title: "Legal Documentation",
-      description: "Thorough preparation and review of all legal documents to protect your interests.",
-      details: [
-        "Contract review and drafting",
-        "Legal research and analysis",
-        "Discovery and depositions",
-        "Motion preparation",
-        "Trial preparation",
-      ],
+      title: "Labour & Employment Law",
+      description: "In Nigeria’s dynamic economy, workplace arrangements continue to evolve with technology and globalisation. We advise employers and employees on employment contracts, workplace policies, and emerging labour issues. Our partners provide strategic guidance that balances compliance, fairness, and commercial practicality.",
     },
     {
       icon: Users,
-      title: "Client Consultation",
-      description: "Personalized consultations to understand your situation and develop winning strategies.",
-      details: [
-        "Initial case evaluation",
-        "Legal strategy development",
-        "Risk assessment",
-        "Regular case updates",
-        "24/7 client support",
-      ],
+      title: "Corporate Secretarial Services",
+      description: "We offer reliable, stress-free secretarial and governance support to help businesses stay compliant. Our team assists company secretaries and in-house solicitors with filings, governance documentation, and risk management processes. We ensure your corporate records and obligations are always in good standing.",
+    },
+    {
+      icon: LandPlotIcon,
+      title: "Planning & Acquisition",
+      description: "Government intervention in land use — through planning controls or compulsory acquisition — can have significant implications for property owners. We provide expert guidance on navigating these challenges, protecting client rights, and pursuing appropriate remedies. Whether dealing with public acquisition or private land-use changes, we help you achieve fair and lawful outcomes.",
     },
   ];
 
@@ -100,8 +65,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Comprehensive legal services in labor law and criminal defense, 
-              delivered with expertise, dedication, and a commitment to your success.
+              We provide strategic legal solutions designed to resolve complex challenges efficiently, ethically, and with measurable results. Intro to our practice areas
             </p>
           </div>
         </div>
@@ -132,16 +96,7 @@ const Services = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="border-t border-border pt-6">
-                    <ul className="space-y-2">
-                      {service.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-accent rounded-full mr-3" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  
                 </Card>
               );
             })}

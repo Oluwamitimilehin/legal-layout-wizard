@@ -1,52 +1,57 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Award, Users, TrendingUp, Heart } from "lucide-react";
+import { Award, Users, TrendingUp, Heart, ComputerIcon } from "lucide-react";
 
 const About = () => {
   const values = [
     {
       icon: Award,
-      title: "Excellence",
-      description: "We strive for excellence in every case, delivering results that exceed expectations.",
+      title: "Depth of Expertise",
+      description: "Our lawyers combine academic excellence with extensive courtroom and regulatory experience, giving clients access to informed, strategic advice across complex legal areas.",
     },
     {
       icon: Users,
-      title: "Client-Focused",
-      description: "Your success is our success. We put your interests first in everything we do.",
+      title: "Client-Centred Approach",
+      description: "Every case receives personal attention. We focus on understanding your goals, not on billing targets or internal pressures.",
+    },
+    {
+      icon: ComputerIcon,
+      title: "Innovation and Insight",
+      description: "We anticipate challenges before they arise and craft creative, forward-thinking solutions tailored to your needs.",
     },
     {
       icon: TrendingUp,
-      title: "Results-Driven",
-      description: "Our track record speaks for itself with countless successful outcomes for our clients.",
+      title: "Proven Track Record in Tax Law",
+      description: "With first-hand experience shaping Nigeria’s tax jurisprudence, we are recognised as one of the country’s leading tax law firms, while also providing complementary legal services.",
     },
     {
       icon: Heart,
-      title: "Integrity",
-      description: "We conduct our practice with the highest ethical standards and transparency.",
+      title: "Integrity at Every Step",
+      description: "Transparency, honesty, and ethical practice are at the heart of everything we do ensuring clients can trust us completely. At The Law Gates, our commitment is simple: to provide insightful, integrity-driven, and impactful legal guidance that helps you move forward with confidence.",
     },
   ];
 
   const team = [
     {
-      name: "Robert Parker",
-      position: "Senior Partner",
-      bio: "With 25 years of experience in labor law, Robert has successfully represented hundreds of clients in workplace disputes.",
+      name: "Olanrewaju M. Lassise-Phillips, ACTI",
+      position: "Lead Partner",
+      bio: "Olanrewaju brings more than two decades of post-call experience to The Law Gates, including twelve years working across legal services functions in financial institutions. Grounded in litigation, he began his career at Chief Afe Babalola’s Chambers and went on to hold senior roles in prominent firms, including Head of Chambers at ASCO LP. He has served as Chairman of the Tax Appeal Tribunal (Lagos Zone) and is widely recognised for his practical contribution to Nigeria’s tax jurisprudence. An experienced author and editor, Olanrewaju is one of the editors behind the African Tax Law Report, the Nigerian Revenue Law Reports, and All Nigerian Tax Cases, publications devoted to reporting tax decisions and analysis. He has consulted on numerous high-profile matters, is a recipient of the Mobil Nigeria Unlimited National Merit Award, and was a University of Lagos Scholar. His work combines courtroom experience, regulatory insight, and a clear focus on delivering results for clients.",
     },
     {
-      name: "Jennifer Brown",
-      position: "Senior Partner",
-      bio: "Jennifer specializes in criminal defense and has achieved remarkable success in complex criminal cases.",
+      name: "Emeka Lawrence Ihebie (Sabbatical)",
+      position: "Associate-Partner, Corporate & Commercial",
+      bio: "Emeka graduated First Class (LLB) from the University of Ibadan (2006) and earned his BL (Second Class, Upper) from the Nigeria Law School (2007). An excellence-driven practitioner, he has worked with top Nigerian firms and brings deep expertise in corporate commercial law and corporate litigation. Emeka advises local and offshore clients on foreign direct investment, regulatory compliance, taxation, banking law, admiralty law, and capital markets. He has represented clients at the High Courts, Court of Appeal and the Investment & Securities Tribunal, and continues to sharpen his expertise through focused training and research.",
     },
     {
-      name: "Michael Chen",
-      position: "Associate Attorney",
-      bio: "Michael brings expertise in employment law and workers' rights, ensuring fair treatment for all clients.",
+      name: "John Ndubuisi Isaac",
+      position: "Associate-Partner, Corporate & Commercial, Tax & Dispute Resolution",
+      bio: "John is a skilled litigator and strategic advocate with strong experience in dispute resolution and real estate matters. He is known for his integrity, courtroom poise, and practical trial strategy. John prepares and argues originating processes and contentious applications at superior courts, develops case strategies, and conducts trials with careful attention to both legal detail and client objectives.",
     },
     {
-      name: "Sarah Williams",
-      position: "Associate Attorney",
-      bio: "Sarah focuses on criminal appeals and has a proven track record of overturning wrongful convictions.",
+      name: "Busayo Kogbede-David",
+      position: "Secretary & Practice Manager",
+      bio: "Busayo combines administrative leadership with sector knowledge to keep the firm running smoothly. Before joining The Law Gates, she served as Secretary to the Society for Tax Attorneys. At the firm she manages practice operations, client intake, and the administrative coordination that ensures timely, professional service across our teams.",
     },
   ];
 
@@ -59,51 +64,57 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-primary">
-              About Parker & Brown
+              The Law Gates Solicitors
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Since 1992, we've been dedicated to providing exceptional legal representation 
-              in labor and criminal law. Our commitment to justice and client satisfaction 
-              has made us one of the most trusted law firms in the region.
+              Our strength lies in the quality, integrity, and experience of our lawyers. Intro to the Team.
             </p>
           </div>
         </div>
       </section>
 
       {/* History Section */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-4xl font-bold mb-8 text-primary">Our History</h2>
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Parker & Brown was founded in 1992 by Robert Parker and Jennifer Brown, two passionate 
-                attorneys who shared a vision of creating a law firm that truly puts clients first. 
-                Starting with a small office and big dreams, they built a practice on the principles 
-                of integrity, dedication, and unwavering commitment to justice.
+                The Law Gates was founded by Olanrewaju M. Lassise-Phillips and Yewande Akomolede, two visionary lawyers who shared a belief that legal practice should combine depth of insight with genuine integrity and measurable impact.
               </p>
               <p>
-                Over the past three decades, our firm has grown from a two-person operation to a 
-                respected team of experienced attorneys, paralegals, and support staff. We've handled 
-                thousands of cases, from simple labor disputes to complex criminal trials, always 
-                maintaining the same level of personal attention and dedication that defined our 
-                founding philosophy.
+                From its humble beginnings, The Law Gates has grown into a respected and trusted name within Nigeria’s legal landscape. What started as a small practice driven by passion and principle has become a dynamic, forward-thinking firm recognised for excellence, professionalism, and a client-centred approach.
               </p>
               <p>
-                Today, Parker & Brown stands as a testament to what can be achieved when legal 
-                expertise meets genuine care for clients. We continue to evolve, embracing new 
-                challenges while staying true to the values that have guided us from the beginning.
+                Our founders built The Law Gates on three enduring values — Insight, Integrity, and Impact — values that continue to guide every member of our team today. We take pride in the relationships we build, the clarity we bring to complex matters, and the results we deliver for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Founders’ Vision */}
+      <section className="py-10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-4xl font-bold mb-8 text-primary">Founders’ Vision</h2>
+            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+              <p>
+                From the outset, Olanrewaju M. Lassise-Phillips and Yewande Akomolede envisioned a law firm built on substance, not size — one where knowledge meets integrity, and every client feels truly understood.
+                Their goal was to create a practice that delivers clear, insightful, and effective legal solutions, guided by professionalism and empathy.
+              </p>
+              <p>
+                Today, that vision continues to define The Law Gates — a firm where every lawyer is empowered to think deeply, act ethically, and make a real impact for the people and businesses we serve.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* What Sets Us Apart */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
-            Our Core Values
+            What Sets Us Apart
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {values.map((value, index) => {
@@ -130,9 +141,13 @@ const About = () => {
       {/* Team Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
             Meet Our Team
+            
           </h2>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="p-8 hover:shadow-lg transition-shadow duration-300">
