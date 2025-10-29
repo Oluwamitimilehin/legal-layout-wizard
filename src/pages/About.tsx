@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Award, Users, TrendingUp, Heart, ComputerIcon } from "lucide-react";
+import placeHolder_setusapart from "@/assets/placeholder_setusapart.jpg";
+import thelawgate_partner from "@/assets/thelawgate_partner.png";
 
 const About = () => {
   const values = [
@@ -67,7 +69,8 @@ const About = () => {
               The Law Gates Solicitors
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Our strength lies in the quality, integrity, and experience of our lawyers. Intro to the Team.
+              We combine academic authority, courtroom experience, and regulatory insight to deliver practical, people-centred legal solutions.
+              Our focus is simple: protecting your interests with clarity, strategy, and care.
             </p>
           </div>
         </div>
@@ -110,42 +113,55 @@ const About = () => {
         </div>
       </section>
 
+      
       {/* What Sets Us Apart */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
-            What Sets Us Apart
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <Card
-                  key={index}
-                  className="p-6 text-center hover:shadow-lg transition-shadow duration-300"
-                >
-                  <Icon className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="font-serif text-xl font-semibold mb-3 text-primary">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {value.description}
-                  </p>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+<section className="py-20 bg-muted">
+  <div className="container mx-auto px-4">
+    <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
+      What Sets Us Apart
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {values.map((value, index) => {
+        const Icon = value.icon;
+        return (
+          <Card
+            key={index}
+            className="p-6 text-center hover:shadow-lg transition-shadow duration-300"
+          >
+            <Icon className="h-12 w-12 text-accent mx-auto mb-4" />
+            <h3 className="font-serif text-xl font-semibold mb-3 text-primary">
+              {value.title}
+            </h3>
+            <p className="text-muted-foreground">{value.description}</p>
+          </Card>
+        );
+      })}
+
+      {/* Complementary Image Card */}
+      
+      <div className="  rounded-xl overflow-hidden shadow-lg">
+                      <img
+                        src={placeHolder_setusapart}
+                        alt="What Sets Us Apart"
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12 text-primary">
+          <h2 className="font-serif text-4xl font-bold text-center mb-3 text-primary">
             Meet Our Team
-            
           </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+        Our strength lies in the quality, integrity, and experience of our lawyers. 
+        Intro to the Team.
+      </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -164,7 +180,60 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* Team Section */}
+<section className="py-20">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center animate-fade-in">
+      <h2 className="font-serif text-4xl font-bold text-center mb-3 text-primary">
+        Meet Our Team
+      </h2>
+      <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+        Our strength lies in the quality, integrity, and experience of our lawyers. 
+        Each member brings unique insight and expertise to deliver exceptional results.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {team.map((member, index) => {
+        const isOlanrewaju = member.name.includes("Olanrewaju M. Lassise-Phillips");
+        const initials = member.name
+          .split(" ")
+          .map((n) => n[0])
+          .join("")
+          .slice(0, 2)
+          .toUpperCase();
+
+        return (
+          <Card
+            key={index}
+            className="p-8 hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center"
+          >
+            {isOlanrewaju ? (
+              <img
+                src={thelawgate_partner}
+                alt={member.name}
+                className="w-24 h-24 rounded-full object-cover mb-4"
+              />
+            ) : (
+              <div className="w-24 h-24 rounded-full bg-accent/10 flex items-center justify-center text-accent text-2xl font-semibold mb-4">
+                {initials}
+              </div>
+            )}
+            <h3 className="font-serif text-2xl font-semibold text-primary mb-1">
+              {member.name}
+            </h3>
+            <p className="text-accent font-medium mb-3">{member.position}</p>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              {member.bio}
+            </p>
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
 
       <Footer />
     </div>

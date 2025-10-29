@@ -40,10 +40,6 @@ const Blog = () => {
     return div.textContent || div.innerText || "";
   };
 
-  // const extractImage = (html: string) => {
-  //   const match = html.match(/<img[^>]+src="([^">]+)"/);
-  //   return match ? match[1] : "/placeholder-blog.jpg";
-  // };
   const extractImage = (html: string) => {
   const match = html.match(/<img[^>]+src="([^">]+)"/);
   const imageUrl = match ? match[1] : null;
@@ -60,10 +56,10 @@ const Blog = () => {
       <section className="pt-32 pb-20 bg-muted">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-primary">
-            My Blog on Medium
+            Our Insights & Perspectives
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Read my latest stories, ideas, and reflections.
+            Dive into our expert articles, in-depth case reviews, and authoritative commentary on the latest tax and legal issues. We also share thought-provoking general discourse on current affairs. Stay informed. Stay ahead.
           </p>
         </div>
       </section>
@@ -99,11 +95,7 @@ const Blog = () => {
                     className="overflow-hidden hover:shadow-xl transition-all duration-300 group"
                   >
                     <div className="relative w-full h-56 overflow-hidden">
-                      {/* <img
-                        src={extractImage(post.description)}
-                        alt={post.title}
-                        className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
-                      /> */}
+                     
                       <div className="relative w-full h-56 overflow-hidden bg-gradient-to-b from-muted/40 to-muted flex items-center justify-center">
   {extractImage(post.description) ? (
     <img

@@ -34,7 +34,7 @@ const Home = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Old Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -65,9 +65,17 @@ const Home = () => {
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-primary">
               Introducing Our Law Firm
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              The Law Gates Solicitors is a full-service Nigerian law firm with a distinct focus on taxation, corporate and commercial law, and dispute resolution. Led by Olanrewaju M. Lassise-Phillips, ACTI, former Chairman of the Tax Appeal Tribunal (Lagos Zone I), with over 2 decades post call experience and author of seminal works on tax law and tribunal practice, the firm combines deep legal knowledge with practical business insight. We advise and represent clients across industries, providing clear, strategic, and results-driven solutions that uphold compliance, resolve disputes, and support sustainable growth. Our hallmark is integrity, precision, and excellence in every engagement.
-            </p>
+            <div className="text-lg space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                The Law Gates is a modern, forward-thinking law firm built on a foundation of expertise, integrity, and client focus. We combine academic excellence, courtroom experience, and regulatory insight to deliver practical, effective solutions tailored to each client’s unique needs. 
+              </p>
+              <p>
+                Since our founding, we have earned a reputation for clarity, professionalism, and results. Our approach is simple: we listen carefully, provide advice that makes sense, and guide our clients confidently through every legal challenge.
+              </p>
+              <p>
+                Whether navigating complex tax matters, corporate disputes, or complementary legal services, our team is committed to making a meaningful impact — always with your best interests in mind.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -102,14 +110,14 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      {/* <section className="py-20 bg-primary text-primary-foreground"> */}
+      <section className="py-20 text-primary-foreground" style={{ backgroundColor: "#2e3095" }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
             Ready to Discuss Your Case?
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-            Schedule a consultation with us today. 
-            We don’t just represent clients in tax matters — we set the benchmark.
+          Let’s start your consultation today. We don’t just act for our clients, we stand with them to achieve exceptional results.
           </p>
           <Link to="/contact">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6">

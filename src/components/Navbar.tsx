@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import theLawGateLogo from "@/assets/thelawgate_logo.png"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,7 @@ const Navbar = () => {
     { name: "Tax Support Services", path: "/TaxSupport" },
     { name: "Blog", path: "/blog" },
     { name: "Contact Us", path: "/contact" },
+    
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -26,7 +28,11 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex flex-col">
               <span className="font-serif text-xl md:text-2xl font-semibold text-primary">
-                The
+                <img
+                src={theLawGateLogo}
+                alt="The Law Gates Logo"
+                className="h-8 w-auto md:h-10 object-contain"
+              />
               </span>
               <span className="text-xs text-muted-foreground tracking-wider">
                 The Law Gates
