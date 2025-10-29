@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Tax Support Services", path: "/pricing" },
+    { name: "Tax Support Services", path: "/TaxSupport" },
     { name: "Blog", path: "/blog" },
     { name: "Contact Us", path: "/contact" },
   ];
@@ -29,7 +29,7 @@ const Navbar = () => {
                 The
               </span>
               <span className="text-xs text-muted-foreground tracking-wider">
-                Law Gates Solicitors
+                The Law Gates
               </span>
             </div>
           </Link>
