@@ -53,8 +53,7 @@ const Contact = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Whether you’re resolving a dispute, planning a transaction, or seeking tax clarity, we’re ready to help.
-              We provide strategic legal solutions designed to resolve complex challenges efficiently, ethically, and with measurable results. Intro to our practice areas
-              Our strength lies in the quality, integrity, and experience of our lawyers. Intro to the Team
+              We provide strategic legal solutions designed to resolve complex challenges efficiently, ethically, and with measurable results.
             </p>
           </div>
         </div>

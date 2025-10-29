@@ -153,7 +153,7 @@ const Blog = () => {
                   <Button
                     size="lg"
                     onClick={() => setVisibleCount((prev) => prev + 6)}
-                    className="bg-accent text-accent-foreground hover:bg-accent/90 transition"
+                    className="bg-primary text-primary-foreground hover:bg-accent/90 transition"
                   >
                     Load More Posts
                   </Button>

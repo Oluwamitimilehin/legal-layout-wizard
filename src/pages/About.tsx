@@ -51,8 +51,8 @@ const About = () => {
       bio: "John is a skilled litigator and strategic advocate with strong experience in dispute resolution and real estate matters. He is known for his integrity, courtroom poise, and practical trial strategy. John prepares and argues originating processes and contentious applications at superior courts, develops case strategies, and conducts trials with careful attention to both legal detail and client objectives.",
     },
     {
-      name: "Busayo Kogbede-David",
-      position: "Secretary & Practice Manager",
+      name: "Busayo David",
+      position: "Practice Manager",
       bio: "Busayo combines administrative leadership with sector knowledge to keep the firm running smoothly. Before joining The Law Gates, she served as Secretary to the Society for Tax Attorneys. At the firm she manages practice operations, client intake, and the administrative coordination that ensures timely, professional service across our teams.",
     },
   ];

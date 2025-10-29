@@ -110,8 +110,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="py-20 bg-primary text-primary-foreground"> */}
-      <section className="py-20 text-primary-foreground" style={{ backgroundColor: "#2e3095" }}>
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
             Ready to Discuss Your Case?
