@@ -4,6 +4,9 @@ import { Card } from "@/components/ui/card";
 import { Award, Users, TrendingUp, Heart, ComputerIcon } from "lucide-react";
 import placeHolder_setusapart from "@/assets/placeholder_setusapart.jpg";
 import thelawgate_partner from "@/assets/thelawgate_partner.png";
+import thelawgate_partner2 from "@/assets/thelawgate_partner2.jpg";
+import thelawgate_partner3 from "@/assets/thelawgate_partner3.jpg";
+
 
 const About = () => {
   const values = [
@@ -151,37 +154,7 @@ const About = () => {
 </section>
 
 
-      {/* Team Section */}
-      {/* <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-serif text-4xl font-bold text-center mb-3 text-primary">
-            Meet Our Team
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-        Our strength lies in the quality, integrity, and experience of our lawyers. 
-        Intro to the Team.
-      </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {team.map((member, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-shadow duration-300">
-                <div className="mb-4">
-                  <h3 className="font-serif text-2xl font-semibold text-primary mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-accent font-medium">{member.position}</p>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {member.bio}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      {/* Team Section */}
+        {/* Team Section */}
 <section className="py-20">
   <div className="container mx-auto px-4">
     <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -195,7 +168,7 @@ const About = () => {
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      {team.map((member, index) => {
+      {/* {team.map((member, index) => {
         const isOlanrewaju = member.name.includes("Olanrewaju M. Lassise-Phillips");
         const initials = member.name
           .split(" ")
@@ -229,7 +202,59 @@ const About = () => {
             </p>
           </Card>
         );
-      })}
+      })} */}
+      {team.map((member, index) => {
+  const isOlanrewaju = member.name.includes("Olanrewaju M. Lassise-Phillips");
+  const isBusayo = member.name.includes("Busayo David");
+  const isJohn = member.name.includes("John Ndubuisi Isaac");
+
+  const initials = member.name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+
+  return (
+    <Card
+      key={index}
+      className="p-8 hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center"
+    >
+      {isOlanrewaju ? (
+        <img
+          src={thelawgate_partner}
+          alt={member.name}
+          className="w-24 h-24 rounded-full object-cover mb-4"
+        />
+      ) : isBusayo ? (
+        <img
+          src={thelawgate_partner2}
+          alt={member.name}
+          className="w-24 h-24 rounded-full object-cover mb-4"
+        />
+      ) : isJohn ? (
+        <img
+          src={thelawgate_partner3}
+          alt={member.name}
+          className="w-24 h-24 rounded-full object-cover mb-4"
+        />
+      ) : (
+        <div className="w-24 h-24 rounded-full bg-accent/10 flex items-center justify-center text-accent text-2xl font-semibold mb-4">
+          {initials}
+        </div>
+      )}
+
+      <h3 className="font-serif text-2xl font-semibold text-primary mb-1">
+        {member.name}
+      </h3>
+      <p className="text-accent font-medium mb-3">{member.position}</p>
+      <p className="text-muted-foreground leading-relaxed text-sm">
+        {member.bio}
+      </p>
+    </Card>
+  );
+})}
+
     </div>
   </div>
 </section>
